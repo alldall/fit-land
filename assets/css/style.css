@@ -23,7 +23,7 @@
   --radius:    18px;
   --radius-lg: 28px;
 
-  --container: 1000px;
+  --container: 1170px;
   --gutter: clamp(16px, 4vw, 30px);
 
   /* Gilroy — проприетарный; Manrope как ближайший бесплатный фолбэк */
@@ -97,12 +97,12 @@ button { font: inherit; cursor: pointer; }
 .hero { background: var(--color-bg); overflow: hidden; }
 .hero__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 570px;   /* фото фиксированной ширины, как в оригинале */
   align-items: center;
   gap: clamp(20px, 3vw, 40px);
-  padding-block: clamp(36px, 5vw, 64px);
+  padding-block: 30px;
 }
-.hero__content { max-width: 480px; }
+.hero__content { max-width: 520px; }
 
 .hero__title {
   font-weight: 600;
@@ -134,8 +134,8 @@ button { font: inherit; cursor: pointer; }
 
 .hero__media { justify-self: end; }
 .hero__image {
-  width: 100%;
-  max-width: 520px;
+  width: 570px;          /* фиксированный размер фото — как на оригинале (570×663) */
+  max-width: 100%;
   height: auto;
 }
 
