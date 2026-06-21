@@ -27,20 +27,7 @@
     });
   }
 
-  /* --- Кнопки «Подробнее»: ведут к форме и подставляют программу --- */
   var programSelect = document.getElementById('program');
-  document.querySelectorAll('.program-card__btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var name = btn.getAttribute('data-program');
-      if (programSelect && name) programSelect.value = name;
-      document.getElementById('lead').scrollIntoView({ behavior: 'smooth' });
-      // Мягко переводим фокус на первое поле формы
-      setTimeout(function () {
-        var nameField = document.getElementById('name');
-        if (nameField) nameField.focus({ preventScroll: true });
-      }, 500);
-    });
-  });
 
   /* --- Форма: маска телефона + валидация -------------------------- */
   var form = document.getElementById('lead-form');
