@@ -10,62 +10,26 @@
   <link rel="icon" type="image/png" href="assets/img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-  <!-- ───────────────────────── Шапка ───────────────────────── -->
-  <header class="header" id="top">
-    <div class="container header__inner">
-      <a class="logo" href="#top" aria-label="Фитнес с Катей Усмановой — на главную">
-        <img class="logo__icon" src="assets/img/logo.png" width="34" height="34" alt="">
-        <span class="logo__text">USMANOVA<span class="logo__accent">FIT</span></span>
-      </a>
-
-      <nav class="nav" id="nav" aria-label="Основная навигация">
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#about">О Кате</a></li>
-          <li class="nav__item"><a class="nav__link" href="#lead">Подбор программы</a></li>
-        </ul>
-      </nav>
-
-      <a class="button button--primary header__cta" href="#lead">Выбрать программу</a>
-
-      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-      </button>
-    </div>
-  </header>
-
   <main>
 
     <!-- ─────────────────── Экран 1: Hero ─────────────────── -->
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__content">
-          <h1 class="hero__title">
-            Приведите тело в&nbsp;форму с&nbsp;чемпионкой Катей Усмановой
-          </h1>
-          <p class="hero__subtitle">
-            без диет, голода и&nbsp;запретов<br>
-            с&nbsp;пользой для здоровья
-          </p>
-          <p class="hero__lead">
-            <span class="accent-blue">Похудеть</span>, подтянуть попу и&nbsp;живот, набрать форму
-            в&nbsp;зале, <span class="accent-blue">восстановиться после родов</span>&nbsp;— тренировки
-            и&nbsp;<span class="accent-blue">питание</span> под вашу цель
-          </p>
-
-          <a class="button button--primary button--lg hero__cta" href="#lead">Выбрать программу</a>
+          <h1 class="hero__title">Приведите тело в&nbsp;форму с&nbsp;чемпионкой Катей Усмановой</h1>
+          <p class="hero__subtitle">без диет, голода и&nbsp;запретов<br>с&nbsp;пользой для здоровья</p>
+          <p class="hero__lead">Похудеть, подтянуть попу и&nbsp;живот, набрать форму в&nbsp;зале, восстановиться после родов&nbsp;— тренировки и&nbsp;питание под вашу цель</p>
+          <a class="button hero__cta" href="#lead">Выбрать программу</a>
           <p class="hero__note">Для корректной работы сайта отключите VPN</p>
         </div>
 
         <div class="hero__media">
-          <img class="hero__image" src="assets/img/katya-hero.png"
-               alt="Катя Усманова с гантелей" width="492" height="576" fetchpriority="high">
+          <img class="hero__image" src="assets/img/hero.png"
+               alt="Катя Усманова выполняет выпад с гантелями" width="975" height="1134" fetchpriority="high">
         </div>
       </div>
     </section>
@@ -73,16 +37,9 @@
     <!-- ─────────────── Экран 2: Достижения ─────────────── -->
     <section class="about" id="about">
       <div class="container">
-        <header class="about__header">
-          <h2 class="about__title">
-            Доверьте свое тело чемпионке фитнес-бикини
-            и&nbsp;тренеру <span class="accent-pink">Кате&nbsp;Усмановой</span>
-          </h2>
-          <p class="about__subtitle">
-            С&nbsp;2015 года создаёт топовые тренировки для идеальных ягодиц,
-            плоского живота и&nbsp;стройности без жёстких диет.<br>
-            Уже более <strong>580&nbsp;000+</strong> участниц тренируются с&nbsp;Катей, ведь она:
-          </p>
+        <header class="about__head">
+          <h2 class="about__title">Доверьте свое тело чемпионке фитнес-бикини и&nbsp;тренеру <span class="accent-pink">Кате&nbsp;Усмановой</span></h2>
+          <p class="about__subtitle">С&nbsp;2015 года создаёт топовые тренировки для идеальных ягодиц, плоского живота и&nbsp;стройности без жёстких диет.<br>Уже более 580&nbsp;000+ участниц тренируются с&nbsp;Катей, ведь она:</p>
         </header>
 
         <div class="about__card">
@@ -110,16 +67,18 @@
           </ul>
 
           <div class="gallery">
-            <ul class="gallery__track" id="gallery-track">
-              <li class="gallery__item"><img src="assets/img/ba-1.png" alt="Результат участницы: до и после" loading="lazy"></li>
-              <li class="gallery__item"><img src="assets/img/ba-2.png" alt="Результат участницы: до и после" loading="lazy"></li>
-              <li class="gallery__item"><img src="assets/img/ba-3.png" alt="Результат участницы: 78, 65 и 57 кг" loading="lazy"></li>
-              <li class="gallery__item"><img src="assets/img/ba-4.png" alt="Результат участницы: после родов" loading="lazy"></li>
+            <ul class="gallery__track">
+              <li class="gallery__item"><img src="assets/img/g1.png" alt="Результаты участниц" loading="lazy"></li>
+              <li class="gallery__item"><img src="assets/img/g2.png" alt="Результаты участниц" loading="lazy"></li>
+              <li class="gallery__item"><img src="assets/img/g3.png" alt="Результаты участниц" loading="lazy"></li>
+              <li class="gallery__item"><img src="assets/img/g4.png" alt="Результаты участниц" loading="lazy"></li>
+              <li class="gallery__item"><img src="assets/img/g5.png" alt="Результаты участниц" loading="lazy"></li>
+              <li class="gallery__item"><img src="assets/img/g6.png" alt="Результаты участниц" loading="lazy"></li>
+              <li class="gallery__item"><img src="assets/img/g7.png" alt="Результаты участниц" loading="lazy"></li>
+              <li class="gallery__item"><img src="assets/img/g8.png" alt="Результаты участниц" loading="lazy"></li>
+              <li class="gallery__item"><img src="assets/img/g9.png" alt="Результаты участниц" loading="lazy"></li>
             </ul>
-            <p class="gallery__hint">
-              Листайте вправо
-              <span class="gallery__arrow" aria-hidden="true">→</span>
-            </p>
+            <p class="gallery__hint">Листайте вправо <span class="gallery__arrow" aria-hidden="true">→</span></p>
           </div>
         </div>
       </div>
@@ -130,10 +89,7 @@
       <div class="container lead__inner">
         <div class="lead__content">
           <h2 class="lead__title">Не&nbsp;знаете, с&nbsp;чего начать?</h2>
-          <p class="lead__text">
-            Напишите нам&nbsp;— и&nbsp;подберём программу под вашу цель и&nbsp;уровень.
-            Это бесплатно и&nbsp;быстро.
-          </p>
+          <p class="lead__text">Напишите нам&nbsp;— и&nbsp;подберём программу под вашу цель и&nbsp;уровень. Это бесплатно и&nbsp;быстро.</p>
           <ul class="lead__benefits">
             <li class="lead__benefit">Персональная подборка под вашу цель</li>
             <li class="lead__benefit">Рассрочка и&nbsp;оплата картой любой страны</li>
@@ -146,15 +102,13 @@
 
           <div class="form__group">
             <label class="form__label" for="name">Как вас зовут?</label>
-            <input class="form__input" id="name" name="name" type="text"
-                   placeholder="Ваше имя" autocomplete="name" required>
+            <input class="form__input" id="name" name="name" type="text" placeholder="Ваше имя" autocomplete="name" required>
             <span class="form__error" data-error-for="name"></span>
           </div>
 
           <div class="form__group">
             <label class="form__label" for="phone">Телефон</label>
-            <input class="form__input" id="phone" name="phone" type="tel"
-                   placeholder="+7 (___) ___-__-__" inputmode="tel" autocomplete="tel" required>
+            <input class="form__input" id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" inputmode="tel" autocomplete="tel" required>
             <span class="form__error" data-error-for="phone"></span>
           </div>
 
@@ -187,18 +141,10 @@
             </label>
           </fieldset>
 
-          <button class="button button--primary button--block button--lg form__submit" type="submit">
-            Получить подборку
-          </button>
+          <button class="button button--block form__submit" type="submit">Получить подборку</button>
 
-          <p class="form__policy">
-            Нажимая кнопку, вы соглашаетесь с
-            <a class="form__policy-link" href="#lead">политикой обработки данных</a>.
-          </p>
-
-          <p class="form__success" id="form-success" role="status" hidden>
-            Спасибо! Заявка принята — куратор свяжется с&nbsp;вами в&nbsp;ближайшее время.
-          </p>
+          <p class="form__policy">Нажимая кнопку, вы соглашаетесь с <a class="form__policy-link" href="#lead">политикой обработки данных</a>.</p>
+          <p class="form__success" id="form-success" role="status" hidden>Спасибо! Заявка принята — куратор свяжется с&nbsp;вами в&nbsp;ближайшее время.</p>
         </form>
       </div>
     </section>
@@ -208,10 +154,6 @@
   <!-- ───────────────────────── Футер ───────────────────────── -->
   <footer class="footer">
     <div class="container footer__inner">
-      <a class="logo logo--light" href="#top" aria-label="На главную">
-        <img class="logo__icon" src="assets/img/logo.png" width="30" height="30" alt="">
-        <span class="logo__text">USMANOVA<span class="logo__accent">FIT</span></span>
-      </a>
       <nav class="footer__nav" aria-label="Документы">
         <a class="footer__link" href="#lead">Оферта</a>
         <a class="footer__link" href="#lead">Политика конфиденциальности</a>
