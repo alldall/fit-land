@@ -1,0 +1,31 @@
+// ===================================================================
+//  Фитнес с Катей Усмановой — точка входа SCSS (style.scss → style.css).
+//  Методология: BEM. Вёрстка: fluid (clamp) + адаптив.
+//  Размеры/цвета/типографика сняты с живой страницы
+//  usmanovafit.gymteam.ru (computed styles).
+//
+//  Архитектура (7-1, упрощённая):
+//    abstracts/  — переменные и миксины (не дают вывода в CSS)
+//    base/       — рантайм-токены, сброс, базовая типографика
+//    layout/     — каркас: контейнер, футер
+//    components/ — переиспользуемые блоки: кнопка, форма, чипы
+//    sections/   — экраны лендинга: hero, about, lead
+// ===================================================================
+
+// 1. Базовый слой
+@use "base/tokens";
+@use "base/reset";
+
+// 2. Каркас
+@use "layout/container";
+@use "layout/footer";
+
+// 3. Компоненты
+@use "components/button";
+@use "components/form";
+@use "components/chip";
+
+// 4. Секции
+@use "sections/hero";
+@use "sections/about";
+@use "sections/lead";

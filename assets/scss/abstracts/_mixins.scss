@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "variables" as *;
+
+// max-width медиа-запрос по имени брейкпоинта
+//   .block { @include respond("md") { ... } }
+@mixin respond($name) {
+  $value: map.get($breakpoints, $name);
+
+  @if $value == null {
+    @error "Неизвестный брейкпоинт `#{$name}`. Доступны: #{map.keys($breakpoints)}.";
+  }
+
+  @media (max-width: $value) {
+    @content;
+  }
+}

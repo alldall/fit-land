@@ -1,0 +1,16 @@
+{
+  // Live Sass Compile: компилировать в assets/css рядом с тем, что грузит index.html.
+  // Точка входа — assets/scss/style.scss → assets/css/style.css.
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/assets/css"
+    }
+  ],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    ".vscode/**"
+  ]
+}

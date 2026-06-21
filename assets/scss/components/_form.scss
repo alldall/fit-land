@@ -1,0 +1,102 @@
+@use "../abstracts/variables" as *;
+
+// --- Форма (.form) --------------------------------------------------
+.form {
+  background: #fff;
+  padding: clamp(22px, 3vw, 36px);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 22px;
+  }
+
+  &__group {
+    margin-bottom: 16px;
+
+    &--inline {
+      border: 0;
+      padding: 0;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 14px 16px;
+    font: inherit;
+    font-size: 15px;
+    color: var(--color-ink);
+    background: var(--color-bg-soft);
+    border: 2px solid transparent;
+    border-radius: 14px;
+    transition: border-color .2s ease, background-color .2s ease;
+
+    &::placeholder { color: #aaa; }
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-pink);
+      background: #fff;
+    }
+
+    &--invalid {
+      border-color: $color-danger;
+      background: #fff5f6;
+    }
+  }
+
+  &__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath fill='%23f66297' d='M1.4 0 7 5.6 12.6 0 14 1.4 7 8.4 0 1.4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 42px;
+  }
+
+  &__error {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: $color-danger;
+  }
+
+  &__submit {
+    margin-top: 10px;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  &__policy {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--color-muted);
+    text-align: center;
+
+    &-link {
+      color: var(--color-pink);
+      text-decoration: underline;
+    }
+  }
+
+  &__success {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: #e9fbf0;
+    border: 2px solid #4cd964;
+    border-radius: 14px;
+    font-weight: 500;
+    font-size: 14px;
+    color: $color-success;
+    text-align: center;
+  }
+}

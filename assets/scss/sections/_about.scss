@@ -1,0 +1,144 @@
+@use "../abstracts/mixins" as *;
+
+// ===================== Экран 2: Достижения =====================
+.about {
+  padding-block: clamp(40px, 6vw, 80px);
+  background: var(--color-bg-soft);
+
+  &__head {
+    max-width: 640px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: clamp(22px, 3.4vw, 28px);
+    line-height: 1.2;
+    color: var(--color-ink);
+  }
+
+  &__subtitle {
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--color-ink);
+  }
+
+  &__card {
+    max-width: 720px;
+    margin: clamp(26px, 4vw, 40px) auto 0;
+    padding: clamp(20px, 3vw, 36px);
+    background: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+  }
+}
+
+// Список достижений
+.merits {
+  display: grid;
+  gap: 12px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    background: var(--color-bg-soft);
+    border-radius: var(--radius);
+
+    @include respond("sm") { padding: 14px; }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--color-ink);
+
+    @include respond("sm") { font-size: 15px; }
+  }
+}
+
+// Галерея «до/после» — горизонтальная карусель из 9 фото
+.gallery {
+  margin-top: clamp(20px, 3vw, 30px);
+
+  &__track {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-pink) transparent;
+    cursor: grab; // подсказка, что блок можно тащить мышью
+
+    // во время перетаскивания (класс ставит main.js)
+    &--dragging {
+      cursor: grabbing;
+      scroll-snap-type: none; // свободное движение без «прилипания»
+      user-select: none;      // не выделять текст при тащении
+    }
+
+    // картинки не должны «отрываться» как ghost при drag
+    img { -webkit-user-drag: none; user-select: none; }
+
+    &::-webkit-scrollbar { height: 6px; }
+
+    &::-webkit-scrollbar-track {
+      background: var(--color-bg-soft);
+      border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--color-pink);
+      border-radius: 999px;
+    }
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    // по умолчанию видно ровно 2 фото: 2 ширины + 1 гэп = 100% видимой области
+    width: calc((100% - 14px) / 2);
+    scroll-snap-align: start;
+
+    img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+
+    // на узких экранах — ~1,5 фото, чтобы было видно, что галерея листается
+    @include respond("sm") { width: 78%; }
+  }
+
+  &__hint {
+    margin-top: 16px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--color-pink);
+  }
+
+  &__arrow {
+    display: inline-block;
+    margin-left: 6px;
+    animation: nudge 1.2s ease-in-out infinite;
+  }
+}
+
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(6px); }
+}

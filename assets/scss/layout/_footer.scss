@@ -1,0 +1,32 @@
+// ============================== Футер ==============================
+.footer {
+  padding-block: 28px;
+  background: var(--color-bg-soft);
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: var(--color-muted);
+    transition: color .2s ease;
+
+    &:hover { color: var(--color-pink); }
+  }
+
+  &__copy {
+    font-size: 13px;
+    color: var(--color-muted);
+  }
+}

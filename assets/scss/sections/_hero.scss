@@ -1,0 +1,87 @@
+@use "../abstracts/mixins" as *;
+
+// ===================== Экран 1: Hero =====================
+.hero {
+  background: var(--color-bg);
+  overflow: hidden;
+
+  // На десктопе контейнер hero без боковых отступов — колонки 1170px как в оригинале
+  .container { padding-inline: 0; }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 570px; // фото фиксированной ширины, как в оригинале
+    align-items: center;
+    gap: 30px;
+    padding-block: 30px;
+  }
+
+  // Левый отступ контента как в оригинале (текст начинается с x≈235 в контейнере 1170)
+  &__content { padding-left: 100px; }
+
+  &__title {
+    font-weight: 600;
+    font-size: clamp(26px, 4.4vw, 34px);
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    text-transform: uppercase;
+    color: var(--color-pink);
+  }
+
+  &__subtitle {
+    margin-top: 15px;
+    font-weight: 300;
+    font-size: clamp(19px, 3vw, 26px);
+    line-height: 1.2;
+    color: var(--color-pink);
+  }
+
+  &__lead {
+    margin-top: 60px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--color-ink);
+  }
+
+  &__cta {
+    margin-top: 60px;
+    padding: 30px 50px;
+  }
+
+  &__note {
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--color-muted);
+  }
+
+  &__media { justify-self: end; }
+
+  &__image {
+    width: 570px; // фиксированный размер фото — как на оригинале (570×663)
+    max-width: 100%;
+    height: auto;
+  }
+
+  @include respond("md") {
+    .container { padding-inline: var(--gutter); }
+
+    &__inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    &__content {
+      max-width: none;
+      padding-left: 0;
+    }
+
+    &__media {
+      justify-self: center;
+      order: -1;
+    }
+
+    &__image { max-width: 360px; }
+  }
+}

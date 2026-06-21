@@ -27,6 +27,48 @@
     });
   }
 
+  /* --- Галерея результатов: листание перетаскиванием мышью -------- */
+  var track = document.querySelector('.gallery__track');
+  if (track) {
+    var isDown = false, startX = 0, startScroll = 0, moved = false;
+
+    track.addEventListener('pointerdown', function (e) {
+      // только основная кнопка мыши / тач / перо
+      if (e.button !== undefined && e.button !== 0) return;
+      isDown = true;
+      moved = false;
+      startX = e.clientX;
+      startScroll = track.scrollLeft;
+      track.classList.add('gallery__track--dragging');
+      track.setPointerCapture(e.pointerId);
+    });
+
+    track.addEventListener('pointermove', function (e) {
+      if (!isDown) return;
+      var dx = e.clientX - startX;
+      if (Math.abs(dx) > 3) moved = true;
+      track.scrollLeft = startScroll - dx;
+    });
+
+    function endDrag(e) {
+      if (!isDown) return;
+      isDown = false;
+      track.classList.remove('gallery__track--dragging');
+      if (e && e.pointerId != null && track.hasPointerCapture(e.pointerId)) {
+        track.releasePointerCapture(e.pointerId);
+      }
+    }
+    track.addEventListener('pointerup', endDrag);
+    track.addEventListener('pointercancel', endDrag);
+
+    // не выполнять клик/переход, если это было перетаскивание
+    track.addEventListener('click', function (e) {
+      if (moved) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    // отменяем нативный «призрак» перетаскивания картинки
+    track.addEventListener('dragstart', function (e) { e.preventDefault(); });
+  }
+
   var programSelect = document.getElementById('program');
 
   /* --- Форма: маска телефона + валидация -------------------------- */

@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+
+// Рантайм-токены: пробрасываем SCSS-переменные в CSS custom properties,
+// чтобы сохранить совместимость с var(--*) в разметке/скриптах.
+:root {
+  --color-pink:    #{$color-pink};
+  --color-pink-2:  #{$color-pink-2};
+  --color-ink:     #{$color-ink};
+  --color-muted:   #{$color-muted};
+  --color-bg:      #{$color-bg};
+  --color-bg-soft: #{$color-bg-soft};
+  --color-line:    #{$color-line};
+
+  --gradient-pink: #{$gradient-pink};
+
+  --shadow-card: #{$shadow-card};
+  --shadow-pink: #{$shadow-pink};
+
+  --radius:    #{$radius};
+  --radius-lg: #{$radius-lg};
+
+  --container: #{$container};
+  --gutter:    #{$gutter};
+
+  // Литерал с кавычками: многословные имена семейств (напр. "Segoe UI")
+  // должны оставаться в кавычках, поэтому не интерполируем список $font.
+  --font: "Gilroy", "Onest", "Segoe UI", system-ui, -apple-system, sans-serif;
+}

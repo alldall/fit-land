@@ -1,0 +1,16 @@
+{
+  "name": "usmanova-landing",
+  "version": "1.0.0",
+  "description": "Лендинг «Фитнес с Катей Усмановой» — 3 экрана на семантической БЭМ-вёрстке (HTML + SCSS + JS).",
+  "private": true,
+  "scripts": {
+    "sass": "sass assets/scss/style.scss assets/css/style.css --no-source-map",
+    "build": "sass assets/scss/style.scss assets/css/style.css --style=compressed --no-source-map",
+    "dev": "sass assets/scss/style.scss assets/css/style.css --watch --no-source-map",
+    "serve": "npx serve .",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "sass": "^1.98.0"
+  }
+}

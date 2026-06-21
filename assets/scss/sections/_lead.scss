@@ -1,0 +1,75 @@
+@use "../abstracts/mixins" as *;
+
+// ===================== Экран 3: Подбор / форма =====================
+.lead {
+  padding-block: clamp(40px, 6vw, 80px);
+  background:
+    radial-gradient(75% 120% at 0% 0%, #ffe1ee 0%, transparent 55%),
+    radial-gradient(75% 120% at 100% 100%, #ffd2e6 0%, transparent 55%),
+    #fff6fa;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 420px);
+    align-items: center;
+    gap: clamp(28px, 5vw, 60px);
+
+    @include respond("md") { grid-template-columns: 1fr; }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: clamp(26px, 4vw, 36px);
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--color-pink);
+  }
+
+  &__text {
+    max-width: 44ch;
+    margin-top: 18px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--color-ink);
+  }
+
+  &__benefits {
+    display: grid;
+    gap: 12px;
+    margin-top: 26px;
+  }
+
+  &__benefit {
+    position: relative;
+    padding-left: 36px;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--color-ink);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--gradient-pink);
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 5px;
+      width: 6px;
+      height: 11px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    @include respond("md") { text-align: left; }
+  }
+}

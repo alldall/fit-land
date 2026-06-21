@@ -1,0 +1,32 @@
+// Чипы выбора канала ------------------------------------------------
+.chip {
+  display: inline-flex;
+  margin: 8px 8px 0 0;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+    &:checked + .chip__label {
+      background: var(--gradient-pink);
+      color: #fff;
+    }
+
+    &:focus-visible + .chip__label {
+      outline: 3px solid var(--color-pink);
+      outline-offset: 2px;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--color-bg-soft);
+    border: 2px solid transparent;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all .15s ease;
+  }
+}

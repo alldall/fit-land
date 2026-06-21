@@ -24,24 +24,45 @@
 - Сабмит валидирует имя и телефон; при ошибке — подсветка и подсказки, при успехе — подтверждение. Данные логируются в консоль (бэкенда в тестовом нет).
 
 ## Технологии
-- Чистые **HTML + CSS + JS**, без фреймворков и сборки.
+- **HTML + SCSS + JS**, без UI-фреймворков.
+- Стили на **SCSS** (Dart Sass, модули `@use`), компилируются в `assets/css/style.css`.
 - Вёрстка по **БЭМ**, семантические теги (`header/main/section/article/form/footer`).
-- Резиновая/адаптивная вёрстка: `clamp()`, CSS Grid `auto-fill/minmax`, контрольные точки 960 / 768 / 420 px.
+- Резиновая/адаптивная вёрстка: `clamp()`, CSS Grid `auto-fill/minmax`, контрольные точки 900 / 420 px.
 - Доступность: `aria-*`, видимый фокус, `prefers-reduced-motion`.
 
 ## Структура
 ```
 index.html
+package.json          скрипты сборки SCSS
 assets/
-  css/style.css
+  scss/               исходники стилей (компилируются в css/style.css)
+    style.scss        точка входа (@use всех партиалов) → css/style.css
+    abstracts/        _variables.scss, _mixins.scss (без вывода в CSS)
+    base/             _tokens.scss (CSS-переменные), _reset.scss
+    layout/           _container.scss, _footer.scss
+    components/       _button.scss, _form.scss, _chip.scss
+    sections/         _hero.scss, _about.scss, _lead.scss
+  css/style.css       скомпилированный результат (подключён в index.html)
   js/main.js
-  img/            обложки программ и портрет
+  img/                обложки программ и портрет
+```
+
+## Сборка стилей
+Один раз поставить зависимости:
+```bash
+npm install
+```
+Команды:
+```bash
+npm run sass     # разовая компиляция scss → css
+npm run dev      # watch-режим (пересборка на лету)
+npm run build    # минифицированный продакшен-билд
 ```
 
 ## Запуск локально
 Открыть `index.html` в браузере или поднять статический сервер:
 ```bash
-npx serve .
+npm run serve    # = npx serve .
 ```
 
 — Инструмент: Claude Code (вайбкодинг). Время сборки: ~1 час.
