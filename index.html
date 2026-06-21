@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Фитнес с Катей Усмановой — программы тренировок для похудения, фигуры и формы после родов. Без диет и голода.">
+  <meta name="theme-color" content="#ec2f7a">
+  <title>Фитнес с Катей Усмановой — выбери свою программу</title>
+
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ───────────────────────── Шапка ───────────────────────── -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="Фитнес с Катей Усмановой — на главную">
+        <img class="logo__icon" src="assets/img/logo.png" width="36" height="36" alt="">
+        <span class="logo__text">USMANOVA<span class="logo__accent">FIT</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#programs">Программы</a></li>
+          <li class="nav__item"><a class="nav__link" href="#about">О Кате</a></li>
+          <li class="nav__item"><a class="nav__link" href="#lead">Подбор программы</a></li>
+        </ul>
+      </nav>
+
+      <a class="button button--primary header__cta" href="#programs">Выбрать программу</a>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ─────────────────────── Экран 1: Hero ─────────────────────── -->
+    <section class="hero" id="about">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__eyebrow">Чемпионка фитнес-бикини · тренер с 2015 года</span>
+          <h1 class="hero__title">
+            Фитнес с&nbsp;Катей&nbsp;Усмановой
+            <span class="hero__title-accent">похудение, фигура, форма после родов</span>
+          </h1>
+          <p class="hero__text">
+            Приведите тело в&nbsp;форму с&nbsp;чемпионкой — без&nbsp;диет, голода
+            и&nbsp;запретов, с&nbsp;пользой для здоровья.
+          </p>
+
+          <div class="hero__actions">
+            <a class="button button--primary button--lg" href="#programs">Выбрать программу</a>
+            <a class="button button--ghost button--lg" href="#lead">Подобрать под цель</a>
+          </div>
+
+          <dl class="hero__stats">
+            <div class="stat">
+              <dt class="stat__value">580&nbsp;000+</dt>
+              <dd class="stat__label">участниц тренируются с&nbsp;Катей</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__value">15 лет</dt>
+              <dd class="stat__label">опыта в&nbsp;профессиональном фитнесе</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__value">6&nbsp;день</dt>
+              <dd class="stat__label">первые видимые результаты</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__media">
+          <img class="hero__image" src="assets/img/hero.png"
+               alt="Катя Усманова с гантелей" width="582" height="864" fetchpriority="high">
+          <span class="hero__badge hero__badge--top">Без диет и голода</span>
+          <span class="hero__badge hero__badge--bottom">Результат с 1-го месяца</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────── Экран 2: Программы ─────────────────── -->
+    <section class="programs" id="programs">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__eyebrow">Тренировки дома и в зале</span>
+          <h2 class="section__title">Выберите свою программу</h2>
+          <p class="section__subtitle">
+            Готовые программы под любую цель и уровень подготовки.
+            Начните с&nbsp;флагмана или подберите курс под себя.
+          </p>
+        </header>
+
+        <ul class="programs__grid">
+          <li>
+            <article class="program-card program-card--featured">
+              <div class="program-card__media">
+                <span class="program-card__badge">Флагман</span>
+                <img class="program-card__image" src="assets/img/prog-method.png" alt="Метод Усмановой" loading="lazy">
+              </div>
+              <div class="program-card__body">
+                <span class="program-card__category">Тренировки дома</span>
+                <h3 class="program-card__title">Метод Усмановой</h3>
+                <p class="program-card__text">Авторская система для стройности, упругих ягодиц и плоского живота.</p>
+                <div class="program-card__footer">
+                  <span class="program-card__price">от 2&nbsp;490 ₽</span>
+                  <button class="button button--primary program-card__btn" type="button" data-program="Метод Усмановой">Подробнее</button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="program-card">
+              <div class="program-card__media">
+                <img class="program-card__image" src="assets/img/prog-slim.png" alt="Марафон Стройности" loading="lazy">
+              </div>
+              <div class="program-card__body">
+                <span class="program-card__category">Тренировки дома</span>
+                <h3 class="program-card__title">Марафон Стройности</h3>
+                <p class="program-card__text">Запусти жиросжигание и подтяни всё тело за один марафон.</p>
+                <div class="program-card__footer">
+                  <span class="program-card__price">от 1&nbsp;990 ₽</span>
+                  <button class="button button--primary program-card__btn" type="button" data-program="Марафон Стройности">Подробнее</button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="program-card">
+              <div class="program-card__media">
+                <img class="program-card__image" src="assets/img/prog-booty.png" alt="Марафон Упругая попа" loading="lazy">
+              </div>
+              <div class="program-card__body">
+                <span class="program-card__category">Тренировки дома</span>
+                <h3 class="program-card__title">Марафон Упругая попа</h3>
+                <p class="program-card__text">Округлая форма и упругость ягодиц без приседаний со штангой.</p>
+                <div class="program-card__footer">
+                  <span class="program-card__price">от 1&nbsp;990 ₽</span>
+                  <button class="button button--primary program-card__btn" type="button" data-program="Марафон Упругая попа">Подробнее</button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="program-card">
+              <div class="program-card__media">
+                <img class="program-card__image" src="assets/img/prog-belly.png" alt="Марафон Плоский живот" loading="lazy">
+              </div>
+              <div class="program-card__body">
+                <span class="program-card__category">Тренировки дома</span>
+                <h3 class="program-card__title">Марафон Плоский живот</h3>
+                <p class="program-card__text">Крепкий пресс и тонкая талия с безопасной нагрузкой.</p>
+                <div class="program-card__footer">
+                  <span class="program-card__price">от 1&nbsp;990 ₽</span>
+                  <button class="button button--primary program-card__btn" type="button" data-program="Марафон Плоский живот">Подробнее</button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="program-card">
+              <div class="program-card__media">
+                <img class="program-card__image" src="assets/img/prog-fatburn.png" alt="Курс Жиросжигающий" loading="lazy">
+              </div>
+              <div class="program-card__body">
+                <span class="program-card__category">Тренировки дома</span>
+                <h3 class="program-card__title">Курс Жиросжигающий</h3>
+                <p class="program-card__text">Интенсив для тех, кому нужен быстрый и заметный результат.</p>
+                <div class="program-card__footer">
+                  <span class="program-card__price">от 2&nbsp;290 ₽</span>
+                  <button class="button button--primary program-card__btn" type="button" data-program="Курс Жиросжигающий">Подробнее</button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="program-card">
+              <div class="program-card__media">
+                <img class="program-card__image" src="assets/img/prog-gym.png" alt="Курс Для зала" loading="lazy">
+              </div>
+              <div class="program-card__body">
+                <span class="program-card__category">Тренировки в зале</span>
+                <h3 class="program-card__title">Курс Для зала</h3>
+                <p class="program-card__text">Мышцы снова растут — когда дома прогресс уже встал.</p>
+                <div class="program-card__footer">
+                  <span class="program-card__price">от 2&nbsp;490 ₽</span>
+                  <button class="button button--primary program-card__btn" type="button" data-program="Курс Для зала">Подробнее</button>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ────────────── Экран 3: Подбор программы (форма) ────────────── -->
+    <section class="lead" id="lead">
+      <div class="container lead__inner">
+        <div class="lead__content">
+          <span class="section__eyebrow section__eyebrow--light">Бесплатно и быстро</span>
+          <h2 class="lead__title">Не знаете, с&nbsp;чего начать?</h2>
+          <p class="lead__text">
+            Оставьте контакты — подберём программу под вашу цель, уровень
+            и&nbsp;график. Поможем сделать первый шаг уже сегодня.
+          </p>
+          <ul class="lead__benefits">
+            <li class="lead__benefit">Персональная подборка под вашу цель</li>
+            <li class="lead__benefit">Рассрочка и оплата картой любой страны</li>
+            <li class="lead__benefit">Поддержка куратора на всём пути</li>
+          </ul>
+        </div>
+
+        <form class="form" id="lead-form" novalidate>
+          <p class="form__title">Подобрать программу</p>
+
+          <div class="form__group">
+            <label class="form__label" for="name">Как вас зовут?</label>
+            <input class="form__input" id="name" name="name" type="text"
+                   placeholder="Ваше имя" autocomplete="name" required>
+            <span class="form__error" data-error-for="name"></span>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="phone">Телефон</label>
+            <input class="form__input" id="phone" name="phone" type="tel"
+                   placeholder="+7 (___) ___-__-__" inputmode="tel" autocomplete="tel" required>
+            <span class="form__error" data-error-for="phone"></span>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="program">Интересующая программа</label>
+            <select class="form__input form__select" id="program" name="program">
+              <option value="">Помогите выбрать</option>
+              <option>Метод Усмановой</option>
+              <option>Марафон Стройности</option>
+              <option>Марафон Упругая попа</option>
+              <option>Марафон Плоский живот</option>
+              <option>Курс Жиросжигающий</option>
+              <option>Курс Для зала</option>
+            </select>
+          </div>
+
+          <fieldset class="form__group form__group--inline">
+            <legend class="form__label">Куда написать?</legend>
+            <label class="chip">
+              <input class="chip__input" type="radio" name="channel" value="Telegram" checked>
+              <span class="chip__label">Telegram</span>
+            </label>
+            <label class="chip">
+              <input class="chip__input" type="radio" name="channel" value="WhatsApp">
+              <span class="chip__label">WhatsApp</span>
+            </label>
+            <label class="chip">
+              <input class="chip__input" type="radio" name="channel" value="Звонок">
+              <span class="chip__label">Звонок</span>
+            </label>
+          </fieldset>
+
+          <button class="button button--primary button--block button--lg form__submit" type="submit">
+            Получить подборку
+          </button>
+
+          <p class="form__policy">
+            Нажимая кнопку, вы соглашаетесь с
+            <a class="form__policy-link" href="#lead">политикой обработки данных</a>.
+          </p>
+
+          <p class="form__success" id="form-success" role="status" hidden>
+            Спасибо! Заявка принята — куратор свяжется с вами в&nbsp;ближайшее время.
+          </p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ───────────────────────── Футер ───────────────────────── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="logo logo--light" href="#top" aria-label="На главную">
+          <img class="logo__icon" src="assets/img/logo.png" width="32" height="32" alt="">
+          <span class="logo__text">USMANOVA<span class="logo__accent">FIT</span></span>
+        </a>
+        <p class="footer__note">Онлайн-тренировки для женщин любого уровня.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Документы">
+        <a class="footer__link" href="#lead">Оферта</a>
+        <a class="footer__link" href="#lead">Политика конфиденциальности</a>
+        <a class="footer__link" href="#lead">Служба заботы</a>
+      </nav>
+
+      <p class="footer__copy">© ООО «Онлайн Фитнес», 2020—2026</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
