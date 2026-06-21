@@ -26,8 +26,8 @@
   --container: 1170px;
   --gutter: clamp(16px, 4vw, 30px);
 
-  /* Gilroy — проприетарный; Manrope как ближайший бесплатный фолбэк */
-  --font: "Gilroy", "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  /* Gilroy — проприетарный; Onest как ближайший бесплатный фолбэк */
+  --font: "Gilroy", "Onest", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
 /* --- Сброс / база ---------------------------------------------- */
@@ -95,40 +95,45 @@ button { font: inherit; cursor: pointer; }
 
 /* ===================== Экран 1: Hero ===================== */
 .hero { background: var(--color-bg); overflow: hidden; }
+/* На десктопе контейнер hero без боковых отступов — колонки 1170px как в оригинале */
+.hero .container { padding-inline: 0; }
 .hero__inner {
   display: grid;
   grid-template-columns: 1fr 570px;   /* фото фиксированной ширины, как в оригинале */
   align-items: center;
-  gap: clamp(20px, 3vw, 40px);
+  gap: 30px;
   padding-block: 30px;
 }
-.hero__content { max-width: 520px; }
+/* Левый отступ контента как в оригинале (текст начинается с x≈235 в контейнере 1170) */
+.hero__content { padding-left: 100px; }
 
 .hero__title {
   font-weight: 600;
-  font-size: clamp(26px, 4.6vw, 36px);
+  font-size: clamp(26px, 4.4vw, 34px);
   line-height: 1.2;
+  letter-spacing: -.02em;
   text-transform: uppercase;
   color: var(--color-pink);
 }
 .hero__subtitle {
-  margin-top: 22px;
+  margin-top: 15px;
   font-weight: 500;
   font-size: clamp(19px, 3vw, 26px);
   line-height: 1.2;
   color: var(--color-pink);
 }
 .hero__lead {
-  margin-top: 26px;
+  margin-top: 60px;
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.2;
   color: var(--color-ink);
 }
-.hero__cta { margin-top: 32px; }
+.hero__cta { margin-top: 60px; padding: 30px 50px; }
 .hero__note {
-  margin-top: 16px;
-  font-size: 13px;
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 16px;
   color: var(--color-muted);
 }
 
@@ -360,8 +365,9 @@ button { font: inherit; cursor: pointer; }
    Адаптив
    =================================================================== */
 @media (max-width: 900px) {
+  .hero .container { padding-inline: var(--gutter); }
   .hero__inner { grid-template-columns: 1fr; text-align: center; }
-  .hero__content { max-width: none; }
+  .hero__content { max-width: none; padding-left: 0; }
   .hero__media { justify-self: center; order: -1; }
   .hero__image { max-width: 360px; }
   .lead__inner { grid-template-columns: 1fr; }
